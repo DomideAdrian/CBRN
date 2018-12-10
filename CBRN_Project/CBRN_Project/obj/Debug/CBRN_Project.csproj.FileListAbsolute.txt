@@ -18,3 +18,23 @@ D:\Proiect NATO\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.Generate
 D:\Proiect NATO\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
 D:\Proiect NATO\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
 D:\Proiect NATO\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.exe.config
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.exe
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.pdb
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csprojAssemblyReference.cache
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\App.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project_MarkupCompile.cache
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.g.resources
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.Properties.Resources.resources
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.GenerateResource.cache
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
