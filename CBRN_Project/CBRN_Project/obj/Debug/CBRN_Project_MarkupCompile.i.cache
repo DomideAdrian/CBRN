@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\andre\source\repos\CBRN_Project\CBRN_Project\obj\Debug\
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\
 CBRN_Project
 none
 false
 DEBUG;TRACE
-C:\Users\andre\source\repos\CBRN_Project\CBRN_Project\App.xaml
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\App.xaml
 4404889081
 
-21-2077402177
+211982833580
 131569487696
 MainWindow.xaml;MVVM\Views\EditView.xaml;MVVM\Views\InputView.xaml;MVVM\Views\OutputView.xaml;
 
