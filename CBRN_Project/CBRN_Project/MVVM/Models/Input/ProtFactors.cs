@@ -2,6 +2,8 @@
 {
     public class ProtFactors
     {
+        #region Properties
+
         public double Inhalation { get; set; }
         public double PervVap    { get; set; }
         public double PercLiq    { get; set; }
@@ -9,6 +11,10 @@
         public double GammaRad   { get; set; }
         public double NeutronRad { get; set; }
         public double NucBlast   { get; set; }
+
+        #endregion
+
+        #region Constructors
 
         public ProtFactors()
         {
@@ -20,5 +26,7 @@
             this.NeutronRad = 1;
             this.NucBlast = 1;
         }
+
+        #endregion
     }
 }

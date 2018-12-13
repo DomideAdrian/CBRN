@@ -4,10 +4,15 @@
 
     public class BreathingRate
     {
+        #region Properties
+
         public double ChemAg_Ih { get; set; }
         public double BioAg_RadPar_Ih { get; set; }
         public double ChemAg_UnitlessFactor { get; set; }
 
+        #endregion
+
+        #region Constructors
 
         public BreathingRate()
         {
@@ -53,5 +58,7 @@
             this.BioAg_RadPar_Ih = BioAg_RadPar_Ih;
             this.ChemAg_UnitlessFactor = this.ChemAg_Ih / 0.015;
         }
+
+        #endregion
     }
 }

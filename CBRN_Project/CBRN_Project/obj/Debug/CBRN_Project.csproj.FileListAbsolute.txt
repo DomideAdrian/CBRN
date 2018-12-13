@@ -38,3 +38,23 @@ D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.Ge
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.exe.config
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.exe
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.pdb
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csprojAssemblyReference.cache
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.baml
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.baml
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.baml
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.baml
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.g.cs
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.g.cs
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.g.cs
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.g.cs
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\App.g.cs
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project_MarkupCompile.cache
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.g.resources
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.Properties.Resources.resources
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.GenerateResource.cache
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
+C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
