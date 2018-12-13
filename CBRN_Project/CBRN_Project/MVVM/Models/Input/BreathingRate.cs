@@ -1,10 +1,9 @@
 ﻿namespace CBRN_Project.MVVM.Models
 {
+    public enum ActivityLevel { AtRest, Light, Moderate, Heavy }
+
     public class BreathingRate
     {
-        public enum ActivityLevel { AtRest, Light, Moderate, Heavy }
-
-
         public double ChemAg_Ih { get; set; }
         public double BioAg_RadPar_Ih { get; set; }
         public double ChemAg_UnitlessFactor { get; set; }
