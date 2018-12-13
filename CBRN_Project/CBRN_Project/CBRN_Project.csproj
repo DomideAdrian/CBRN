@@ -55,9 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MVVM\Models\Input\BodySurfaceArea.cs" />
+    <Compile Include="DataService.cs" />
     <Compile Include="MVVM\Models\Input\BreathingRate.cs" />
+    <Compile Include="MVVM\Models\Input\Challenge.cs" />
+    <Compile Include="MVVM\Models\Input\EffChallenge.cs" />
     <Compile Include="MVVM\Models\Input\Icon.cs" />
+    <Compile Include="MVVM\Models\Input\ProtFactors.cs" />
     <Compile Include="MVVM\ViewModels\OutputViewModel.cs" />
     <Compile Include="MVVM\ViewModels\EditViewModel.cs" />
     <Compile Include="MVVM\ViewModels\InputViewModel.cs" />
@@ -125,8 +128,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MVVM\Models\Engine\" />
-    <Folder Include="MVVM\Models\Output\" />
+    <Folder Include="MVVM\Models\Engine\Chemical\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
