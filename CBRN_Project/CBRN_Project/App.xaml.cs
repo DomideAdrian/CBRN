@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CBRN_Project.MVVM.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,26 @@ namespace CBRN_Project
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            MainWindow = new MainWindow();
+
+            MainWindowViewModel mainViewModel = new MainWindowViewModel();
+
+            EventHandler handler = null;
+            handler = delegate
+            {
+                mainViewModel.RequestClose -= handler;
+                MainWindow.Close();
+            };
+            mainViewModel.RequestClose += handler;
+
+            MainWindow.DataContext = mainViewModel;
+
+            MainWindow.Show();
+           // MainWindow.MainFrame.Navigated += mainViewModel.ClearFrameCache;
+        }
     }
 }

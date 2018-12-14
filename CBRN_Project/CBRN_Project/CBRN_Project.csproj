@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,24 +57,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data Access\IconAddedEventArgs.cs" />
+    <Compile Include="Data Access\IconRepository.cs" />
     <Compile Include="MVVM\Models\BodySurfaceArea.cs" />
     <Compile Include="MVVM\Models\BreathingRate.cs" />
     <Compile Include="MVVM\Models\Icon.cs" />
-    <Compile Include="MVVM\ViewModels\OutputViewModel.cs" />
+    <Compile Include="MVVM\Models\Radiological Agent Models\WholeBodyRadiation.cs" />
+    <Compile Include="MVVM\ViewModels\CommandViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\CreateIconViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\IconListViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\MainWindowViewModel.cs" />
     <Compile Include="MVVM\ViewModels\EditViewModel.cs" />
-    <Compile Include="MVVM\ViewModels\InputViewModel.cs" />
-    <Compile Include="MVVM\ViewModels\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\ViewModelBase.cs" />
+    <Compile Include="MVVM\ViewModels\WorkspaceViewModel.cs" />
+    <Compile Include="MVVM\Views\CreateIconView.xaml.cs">
+      <DependentUpon>CreateIconView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Views\EditView.xaml.cs">
       <DependentUpon>EditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\IconsListView.xaml.cs">
+      <DependentUpon>IconsListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Views\InputView.xaml.cs">
       <DependentUpon>InputView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\Views\OutputView.xaml.cs">
-      <DependentUpon>OutputView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Utility\ObservableObject.cs" />
     <Compile Include="Utility\RelayCommand.cs" />
+    <Compile Include="Utility\StringToDoubleConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,15 +97,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MainWindowResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\CreateIconView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\Views\EditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVVM\Views\InputView.xaml">
+    <Page Include="MVVM\Views\IconsListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVVM\Views\OutputView.xaml">
+    <Page Include="MVVM\Views\InputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,5 +145,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\add-icon.png" />
+    <Resource Include="Resources\Images\edit-icon.png" />
+    <Resource Include="Resources\Images\remove-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

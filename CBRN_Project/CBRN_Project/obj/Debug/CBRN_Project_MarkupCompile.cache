@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\App.xaml
-4404889081
+61721390741
 
-17799700810
-131569487696
-MainWindow.xaml;MVVM\Views\EditView.xaml;MVVM\Views\InputView.xaml;MVVM\Views\OutputView.xaml;
+25-1488278162
+151984215308
+MainWindow.xaml;MainWindowResources.xaml;MVVM\Views\CreateIconView.xaml;MVVM\Views\EditView.xaml;MVVM\Views\IconsListView.xaml;MVVM\Views\InputView.xaml;
 
 False
 

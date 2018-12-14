@@ -1,17 +1,18 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace CBRN_Project.Utility
 {
-    public class RelayCommand<T> : ICommand
+    public class RelayCommand : ICommand
     {
-        private readonly Action<T>     execute;
-        private readonly Func<T, bool> canExecute;
+        private readonly Action<object>     execute;
+        private readonly Predicate<object>  canExecute;
 
-        public RelayCommand(Action<T> execute, Func<T, bool> canExecute = null)
+        public RelayCommand(Action<object> _execute, Predicate<object> _canExecute = null)
         {
-            this.execute    = execute ?? throw new ArgumentNullException(nameof(execute));
-            this.canExecute = canExecute ?? (parameter => true);
+            this.execute    = _execute ?? throw new ArgumentNullException("execute");
+            this.canExecute = _canExecute;
         }
 
         public event EventHandler CanExecuteChanged
@@ -20,8 +21,12 @@ namespace CBRN_Project.Utility
             remove => CommandManager.RequerySuggested -= value;
         }
 
-        public void Execute(object parameter) => execute((T)parameter);
+        public void Execute(object parameter) => execute(parameter);
 
-        public bool CanExecute(object parameter) => canExecute((T)parameter);
+        [DebuggerStepThrough]
+        public bool CanExecute(object parameter)
+        {
+            return canExecute == null ? true : canExecute(parameter);
+        }
     }
 }

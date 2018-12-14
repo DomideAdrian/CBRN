@@ -25,11 +25,9 @@ D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csprojAss
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.baml
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.baml
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.baml
-D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.baml
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.g.cs
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.g.cs
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.g.cs
-D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.g.cs
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\App.g.cs
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project_MarkupCompile.cache
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.g.resources
@@ -38,3 +36,11 @@ D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.Ge
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project_MarkupCompile.lref
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MainWindowResources.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\App.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\CreateIconView.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\CreateIconView.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\IconsListView.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\IconsListView.baml

@@ -7,12 +7,8 @@ namespace CBRN_Project
     {
         public MainWindow()
         {
-            MainViewModel mainViewModel = new MainViewModel();
-
             InitializeComponent();
-
-            this.DataContext = mainViewModel;
-            this.MainFrame.Navigated += mainViewModel.ClearFrameCache;
+            
         }
     }
 }
