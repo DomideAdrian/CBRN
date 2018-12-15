@@ -10,7 +10,9 @@ namespace CBRN_Project
             MainViewModel mainViewModel = new MainViewModel();
 
             InitializeComponent();
-
+            DataService.Initialize();
+            DataService.GetTable("4-1");
+            
             this.DataContext = mainViewModel;
             this.MainFrame.Navigated += mainViewModel.ClearFrameCache;
         }

@@ -58,3 +58,23 @@ C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Projec
 C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
 C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
 C:\Users\andre\Source\Repos\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.exe.config
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.exe
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\bin\Debug\CBRN_Project.pdb
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csprojAssemblyReference.cache
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.baml
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.baml
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.baml
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.baml
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MainWindow.g.cs
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\EditView.g.cs
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\InputView.g.cs
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\OutputView.g.cs
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\App.g.cs
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project_MarkupCompile.cache
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.g.resources
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.Properties.Resources.resources
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.GenerateResource.cache
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CoreCompileInputs.cache
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.exe
+E:\My New Documents\New Documents\cbrn\repo\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.pdb
