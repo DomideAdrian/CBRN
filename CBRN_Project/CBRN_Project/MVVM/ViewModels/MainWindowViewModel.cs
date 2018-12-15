@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 
@@ -19,16 +20,23 @@ namespace CBRN_Project.MVVM.ViewModels
     {
         #region Fields
 
+        public static MainWindowViewModel           Instance = null;
         readonly IconRepository                     iconRepository;
         IconListViewModel                           iconsList;
         ObservableCollection<WorkspaceViewModel>    workspaces;
+
+        IDialogService                              dialogService;
 
         #endregion
 
         #region Constructor
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IDialogService dialogService)
         {
+            if (Instance == null)
+                Instance = this;
+
+            this.dialogService = dialogService;
             base.DisplayName = "MainWindow";
             iconRepository = new IconRepository();
         }
@@ -87,7 +95,9 @@ namespace CBRN_Project.MVVM.ViewModels
 
         #endregion
 
-        #region Private Functions
+        #region Commands
+
+        #region Create Icon Command
 
         RelayCommand createIconCommand;
 
@@ -105,16 +115,12 @@ namespace CBRN_Project.MVVM.ViewModels
         }
 
         void CreateNewIcon()
-        {
-            if (Workspaces.Count == 4)
-                return;
-
-            Icon newIcon = Icon.CreateNewIcon(IconRepository.LastId);
-            CreateIconViewModel workspace = new CreateIconViewModel(newIcon, iconRepository);
+        {            
+            Icon newIcon = Icon.CreateNewIcon(IconRepository.IconId);
+            CreateIconViewModel workspace = new CreateIconViewModel(newIcon, iconRepository, dialogService);
             this.Workspaces.Add(workspace);
             this.SetActiveWorkspace(workspace);
         }
-
 
         void SetActiveWorkspace(WorkspaceViewModel workspace)
         {
@@ -124,6 +130,45 @@ namespace CBRN_Project.MVVM.ViewModels
             if (collectionView != null)
                 collectionView.MoveCurrentTo(workspace);
         }
+
+        public void CloseWorkspace()
+        {
+            ICollectionView collectionView = CollectionViewSource.GetDefaultView(this.Workspaces);
+            WorkspaceViewModel currentViewModel = collectionView.CurrentItem as WorkspaceViewModel;
+
+            if (collectionView != null)
+            {
+                collectionView.MoveCurrentToPrevious();
+            }
+            
+            currentViewModel.RequestClose += this.OnWorkspaceRequestClose;
+            Workspaces.Remove(currentViewModel);
+
+        }
+        #endregion
+
+        #region Remove Icon Command
+
+        RelayCommand removeIconCommand;
+
+        public ICommand RemoveIconCommand
+        {
+            get
+            {
+                if (removeIconCommand == null)
+                    removeIconCommand = new RelayCommand(t => this.RemoveIcon());
+
+                return removeIconCommand;
+            }
+        }
+
+        void RemoveIcon()
+        {
+            iconsList.RemoveIcon();
+        }
+
+        #endregion
+
         #endregion
     }
 }

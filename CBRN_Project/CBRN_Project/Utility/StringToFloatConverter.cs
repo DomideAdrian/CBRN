@@ -10,14 +10,14 @@ using System.Windows.Data;
 namespace CBRN_Project.Utility
 {
     [ValueConversion(typeof(object), typeof(string))]
-    public class StringToDoubleConverter : IValueConverter
+    public class StringToFloatConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double num;
+            float num;
             string valueString = value as string;
 
-            if(double.TryParse(valueString, out num))
+            if(float.TryParse(valueString, out num))
             {
                 return num;
             }

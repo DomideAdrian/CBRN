@@ -6,11 +6,14 @@
              xmlns:local="clr-namespace:CBRN_Project.MVVM.Views"
              xmlns:u="clr-namespace:CBRN_Project.Utility"
              mc:Ignorable="d" 
+             xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+             md:DialogServiceViews.IsRegistered="True"
              d:DesignHeight="450" d:DesignWidth="800">
 
     <!-- Clasic styles for create icon -->
     <UserControl.Resources>
-        <u:StringToDoubleConverter x:Key="StringToDouble"/>
+        <u:StringToFloatConverter x:Key="StringToFloat"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
 
         <Style TargetType="{x:Type Button}" x:Key="ButtonCommandStyle">
             <Setter Property="Background" Value="#373737" />
@@ -51,21 +54,21 @@
 
         <Style TargetType="TextBox">
             <Setter Property="Height"               Value="20"  />
-            <Setter Property="Width"                Value="100" />
+            <Setter Property="Width"                Value="70" />
             <Setter Property="HorizontalAlignment"  Value="Left"/>
             <Setter Property="Margin"               Value="10"  />
         </Style>
 
         <Style TargetType="ComboBox">
             <Setter Property="Height"               Value="20"  />
-            <Setter Property="Width"                Value="100" />
+            <Setter Property="Width"                Value="70" />
             <Setter Property="HorizontalAlignment"  Value="Left"/>
             <Setter Property="Margin"               Value="10"  />
         </Style>
 
         <Style TargetType="Button">
             <Setter Property="Height"               Value="20"  />
-            <Setter Property="Width"                Value="100" />
+            <Setter Property="Width"                Value="70" />
             <Setter Property="HorizontalAlignment"  Value="Left"/>
             <Setter Property="Margin"               Value="10"  />
         </Style>
@@ -96,55 +99,126 @@
         </Grid>
 
         <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0">
-                <TextBlock Text="Personnel:"        />
-                <TextBlock Text="Breathing Rate:"   />
-                <TextBlock Text="Body Surface Area:"/>
-                <TextBlock Text="IPE:"              />
-                <TextBlock Text="Vehicle/Shelter:"  />
-                <TextBlock Text="Prophylaxis:"      />
-                <TextBlock Text="Uniform:"          />
-            </StackPanel>
+            <TextBlock Text="Personnel:"       
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+            <TextBlock Text="Breathing Rate:"   
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+            <TextBlock Text="Body Surface Area:"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+            <TextBlock Text="IPE Class:"              
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+            <TextBlock Text="Vehicle/Shelter:"  
+                       Grid.Row="4"
+                       Grid.Column="0"/>
+            <TextBlock Text="Prophylaxis:"      
+                       Grid.Row="5"
+                       Grid.Column="0"/>
+            <TextBlock Text="Uniform:"         
+                       Grid.Row="6"
+                       Grid.Column="0"/>
 
-            <StackPanel Grid.Column="1">
-                <TextBox x:Name="personeelTxt" 
-                         Text="{Binding Personeel, 
-                                UpdateSourceTrigger=PropertyChanged, 
-                                Converter={StaticResource StringToDouble}}"/>
-                <ComboBox/>
-                <TextBox/>
-                <Button Content="Edit"/>
-                <Button Content="Edit"/>
-                <Button Content="Edit"/>
-                <CheckBox/>
-            </StackPanel>
+            
+            <TextBox x:Name="personeelTxt" 
+                        Text="{Binding Personnel, 
+                            Mode=TwoWay,
+                            UpdateSourceTrigger=PropertyChanged,
+                            Converter={StaticResource StringToFloat}}"
+                        Grid.Row="0" Grid.Column="1"/>
+            <ComboBox ItemsSource="{Binding BreathingRateDictionary}"
+                        DisplayMemberPath="Key"
+                        SelectedValuePath="Value"
+                        SelectedItem="{Binding BreathingRateSelected}"
+                        Visibility="{Binding BreathingRateComboBoxVisibility,
+                                     UpdateSourceTrigger=PropertyChanged,
+                                     Converter={StaticResource BooleanToVisibility}}"
+                        Grid.Row="1"  Grid.Column="1"/>
+            <TextBox Text="{Binding BreathingRateValue,
+                            Mode=TwoWay,
+                            UpdateSourceTrigger=PropertyChanged,
+                            Converter={StaticResource StringToFloat}}"
+                     Visibility="{Binding BreathingRateTextBoxVisibility,
+                                  UpdateSourceTrigger=PropertyChanged,
+                                  Converter={StaticResource BooleanToVisibility}}"
+                     Grid.Row="1" Grid.Column="1"/>
+            <TextBox Text="{Binding BodySurfaceArea,
+                            Mode=TwoWay,
+                            FallbackValue='0.9',
+                            UpdateSourceTrigger=PropertyChanged,
+                            Converter={StaticResource StringToFloat}}"
+                        Grid.Row="2"  Grid.Column="1"/>
+            <ComboBox ItemsSource="{Binding IpeList}"
+                      SelectedValue="Value"
+                      DisplayMemberPath="Value"
+                      SelectedItem="{Binding IpeSelected}"
+                      Grid.Row="3"  Grid.Column="1"/>
+            <Button Content="Edit" Grid.Row="4"  Grid.Column="1"/>
+            <Button Content="Edit" Grid.Row="5"  Grid.Column="1"/>
+            <CheckBox Grid.Row="6"  Grid.Column="1"/>
 
-            <StackPanel Grid.Column="2">
-                <TextBlock Text="Inhalation:"         />
-                <TextBlock Text="Percutaneous Vapour:"/>
-                <TextBlock Text="Percutaneous Liquid:"/>
-                <TextBlock Text="Beta Radiation:"     />
-                <TextBlock Text="Gamma Radiation:"    />
-                <TextBlock Text="Neutron Radiation:"  />
-                <TextBlock Text="Nuclear Blast:"      />
-            </StackPanel>
+            <Button Content="Edit" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left"
+                    Command="{Binding ChangeToTextBoxBreathingRate}"/>
+            <Button Content="Edit" 
+                    Command="{Binding EditIpeCommand}"
+                    Grid.Row="3"  Grid.Column="2"/>
+            
+            <TextBlock Text="Inhalation:"         
+                       Grid.Row="0"
+                       Grid.Column="3"/>
+            <TextBlock Text="Percutaneous Vapour:"
+                       Grid.Row="1"
+                       Grid.Column="3"/>
+            <TextBlock Text="Percutaneous Liquid:"
+                       Grid.Row="2"
+                       Grid.Column="3"/>
+            <TextBlock Text="Beta Radiation:"     
+                       Grid.Row="3"
+                       Grid.Column="3"/>
+            <TextBlock Text="Gamma Radiation:"    
+                       Grid.Row="4"
+                       Grid.Column="3"/>
+            <TextBlock Text="Neutron Radiation:"  
+                       Grid.Row="5"
+                       Grid.Column="3"/>
+            <TextBlock Text="Nuclear Blast:"      
+                       Grid.Row="6"
+                       Grid.Column="3"/>
 
-            <StackPanel Grid.Column="3">
-                <TextBox/>
-                <TextBox/>
-                <TextBox/>
-                <TextBox/>
-                <TextBox/>
-                <TextBox/>
-                <TextBox/>
-            </StackPanel>
+            <TextBox Grid.Row="0"
+                     Grid.Column="4"/>
+            <TextBox Grid.Row="1"
+                     Grid.Column="4"/>
+            <TextBox Grid.Row="2"
+                     Grid.Column="4"/>
+            <TextBox Grid.Row="3"
+                     Grid.Column="4"/>
+            <TextBox Grid.Row="4"
+                     Grid.Column="4"/>
+            <TextBox Grid.Row="5"
+                     Grid.Column="4"/>
+            <TextBox Grid.Row="6"
+                     Grid.Column="4"/>
         </Grid>
     </Grid>
 </UserControl>

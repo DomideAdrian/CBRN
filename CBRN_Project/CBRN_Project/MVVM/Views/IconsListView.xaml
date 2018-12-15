@@ -42,17 +42,17 @@
             </StackPanel>
         </Grid>
 
-        <ListView 
-              ItemContainerStyle="{StaticResource IconItemStyle}"
-              ItemsSource="{Binding IconsList}">
-            
-            <ListView.View>
-                <GridView ColumnHeaderContainerStyle="{StaticResource NoHeaderStyle}">
-                    <GridViewColumn
-                                    DisplayMemberBinding="{Binding Path=Name}"
-                                    />
-                </GridView>
-            </ListView.View>
+        <ListView   Name="ListViewOfIcons"
+                    ItemContainerStyle="{StaticResource IconItemStyle}"
+                    ItemsSource="{Binding IconsList}"
+                    SelectedItem="{Binding SelectedIcon}"
+                    SelectionMode="Single">
+                <ListView.View>
+                    <GridView ColumnHeaderContainerStyle="{StaticResource NoHeaderStyle}">
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}"
+                                        Width="100"/>
+                    </GridView>
+                </ListView.View>
         </ListView>
     </DockPanel>
 </UserControl>

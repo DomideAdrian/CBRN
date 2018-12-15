@@ -1,4 +1,6 @@
 ﻿using CBRN_Project.MVVM.ViewModels;
+using CBRN_Project.MVVM.Views;
+using CBRN_Project.Utility;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -20,7 +22,10 @@ namespace CBRN_Project
 
             MainWindow = new MainWindow();
 
-            MainWindowViewModel mainViewModel = new MainWindowViewModel();
+            IDialogService dialogService = new DialogService(MainWindow);
+            dialogService.Register<DialogViewModel, DialogWindow>();
+
+            MainWindowViewModel mainViewModel = new MainWindowViewModel(dialogService);
 
             EventHandler handler = null;
             handler = delegate
@@ -31,6 +36,7 @@ namespace CBRN_Project
             mainViewModel.RequestClose += handler;
 
             MainWindow.DataContext = mainViewModel;
+
 
             MainWindow.Show();
            // MainWindow.MainFrame.Navigated += mainViewModel.ClearFrameCache;

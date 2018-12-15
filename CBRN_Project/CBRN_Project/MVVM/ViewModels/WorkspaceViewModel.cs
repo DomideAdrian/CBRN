@@ -46,7 +46,7 @@ namespace CBRN_Project.MVVM.ViewModels
         /// </summary>
         public event EventHandler RequestClose;
 
-        void OnRequestClose()
+        public void OnRequestClose()
         {
             EventHandler handler = this.RequestClose;
             if (handler != null)

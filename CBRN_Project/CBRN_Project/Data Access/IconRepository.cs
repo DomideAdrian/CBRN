@@ -12,7 +12,9 @@ namespace CBRN_Project.Data_Access
         #region Fields
 
         readonly List<Icon> icons;
-        public static int   LastId { get; set; } = 1;
+
+        public static int IconId { get; set; } = 1;
+        public static int NumberOfIcons { get; set; }
 
         #endregion
 
@@ -37,8 +39,24 @@ namespace CBRN_Project.Data_Access
             if(!icons.Contains(icon))
             {
                 icons.Add(icon);
-                LastId++;
-                this.IconAdded?.Invoke(this, new IconAddedEventArgs(icon));
+                NumberOfIcons = icons.Count;
+                IconAdded?.Invoke(this, new IconAddedEventArgs(icon));
+                IconId++;
+            }
+        }
+
+        public event EventHandler<IconRemovedEventArgs> IconRemoved;
+
+        public void RemoveIcon(Icon icon)
+        {
+            if (icon == null)
+                throw new ArgumentNullException("icon");
+
+            if(icons.Exists(param => param.Name == icon.Name))
+            {
+                icons.Remove(icon);
+                IconRemoved?.Invoke(this, new IconRemovedEventArgs(icon));
+                NumberOfIcons = icons.Count;
             }
         }
 

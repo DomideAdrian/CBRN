@@ -7,6 +7,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace CBRN_Project.MVVM.ViewModels
 {
@@ -16,13 +17,14 @@ namespace CBRN_Project.MVVM.ViewModels
 
         readonly IconRepository iconRepository;
 
-        public double TotalIcons
-        {
+        public double TotalIcons {
             get
             {
-                return IconRepository.LastId - 1;
+                return IconsList.Count;
             }
         }
+
+        public Icon SelectedIcon { get; set; }
 
         public ObservableCollection<Icon> IconsList { get; private set; }
 
@@ -37,13 +39,37 @@ namespace CBRN_Project.MVVM.ViewModels
 
             // Subscribe for notifications of when a new icon is saved.
             iconRepository.IconAdded += this.OnIconAddedToRepository;
+
+            //iconRepository.IconRemoved += this.OnIconRemovedFromRepository;
         }
 
         void OnIconAddedToRepository(object sender, IconAddedEventArgs e)
         {
-            var icon = new Icon(IconRepository.LastId);
-            this.OnPropertyChanged("TotalIcons");
+            var icon = new Icon(IconRepository.IconId);
             IconsList.Add(icon);
+            
+            this.OnPropertyChanged("TotalIcons");
         }
+
+        public void RemoveIcon()
+        {
+            if (SelectedIcon != null)
+            {
+                iconRepository.RemoveIcon(SelectedIcon);
+                IconsList.Remove(SelectedIcon);
+
+                this.OnPropertyChanged("TotalIcons");
+            }
+        }
+
+        /*public void OnIconRemovedFromRepository(object sender, IconRemovedEventArgs e)
+        {
+            if (SelectedIcon != null)
+            {
+                IconsList.Remove(SelectedIcon);
+                
+                this.OnPropertyChanged("TotalIcons");
+            }
+        }*/
     }
 }

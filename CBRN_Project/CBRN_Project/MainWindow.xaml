@@ -5,7 +5,7 @@
         xmlns:mc    ="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="CBRN" MinHeight="600" MinWidth="850" Height="600" Width="850">
+        Title="CBRN" MinHeight="650" MinWidth="1050" Height="650" Width="1050">
 
     <Window.Resources>
         <ResourceDictionary Source="MainWindowResources.xaml"/>

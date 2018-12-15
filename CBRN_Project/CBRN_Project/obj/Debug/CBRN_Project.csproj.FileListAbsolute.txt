@@ -44,3 +44,15 @@ D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\CreateIconV
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\CreateIconView.baml
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\IconsListView.g.cs
 D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\IconsListView.baml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\MvvmDialogs.dll
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\MvvmDialogs.xml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\CBRN_Project.csproj.CopyComplete
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\GalaSoft.MvvmLight.dll
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\System.Windows.Interactivity.dll
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\GalaSoft.MvvmLight.pdb
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\GalaSoft.MvvmLight.xml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\DialogWindow.g.cs
+D:\GitHub - NATO\CBRN\CBRN_Project\CBRN_Project\obj\Debug\MVVM\Views\DialogWindow.baml

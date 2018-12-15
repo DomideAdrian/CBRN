@@ -2,14 +2,12 @@
 {
     public class Icon
     {
-        public string   Name {
-            get
-            {
-                return "Icon " + Id;
-            }
-        }
-        public int      Id { get; set; }
-        public double   Personnel { get; set; }
+        public string   Name            { get; private set; }
+        public int      Id              { get; set; }
+        public float    Personnel       { get; set; }
+        public float    BodySurfaceArea { get; set; } = (float)0.9;
+        public float BreathingRateValue { get; set; } = (float)0.0150;
+        public string   Ipe             { get; set; }
 
         public static Icon CreateNewIcon(int iconId)
         {
@@ -18,7 +16,8 @@
 
         public Icon(int iconId)
         {
-            Id = iconId - 1;
+            Id = iconId;
+            Name = "Icon " + Id.ToString();
         }
     }
 }
