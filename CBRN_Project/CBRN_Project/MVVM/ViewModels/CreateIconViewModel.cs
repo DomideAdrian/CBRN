@@ -79,28 +79,28 @@ namespace CBRN_Project.MVVM.ViewModels
 
         #region Breathing Rate
 
-        private ObservableDictionary<string, float> breathingRateDictionary;
+        private ObservableCollection<string> breathingRateList;
 
-        public ObservableDictionary<string, float> BreathingRateDictionary
+        public ObservableCollection<string> BreathingRateList
         {
-            get { return breathingRateDictionary; }
+            get { return breathingRateList; }
             set
             {
-                breathingRateDictionary = value;
+                breathingRateList = value;
 
-                OnPropertyChanged("BreathingRateDictionary");
+                OnPropertyChanged("BreathingRateList");
             }
         }
 
-        private KeyValuePair<string, float> breathingRateSelected;
+        private string breathingRateSelected;
 
-        public KeyValuePair<string, float> BreathingRateSelected
+        public string BreathingRateSelected
         {
             get { return breathingRateSelected; }
             set
             {
                 breathingRateSelected = value;
-                icon.BreathingRateValue = breathingRateSelected.Value;
+                icon.BreathingRate.BreathingRateActivityLevel = breathingRateSelected;
 
                 OnPropertyChanged("BreathingRateSelected");
             }
@@ -130,34 +130,51 @@ namespace CBRN_Project.MVVM.ViewModels
             }
         }
 
-        public float BreathingRateValue
+        public float BreathingRateChemAg
         {
             get
             {
-                return icon.BreathingRateValue;
+                return icon.BreathingRate.ChemAg_Ih;
             }
             set
             {
-                if (value == icon.BreathingRateValue)
+                if (value == icon.BreathingRate.ChemAg_Ih)
                     return;
 
-                icon.BreathingRateValue = value;
+                icon.BreathingRate.ChemAg_Ih = value;
 
-                base.OnPropertyChanged("BreathingRateValue");
+                base.OnPropertyChanged("BreathingRateChemAg");
+            }
+        }
+
+        public float BreathingRateBioAg
+        {
+            get
+            {
+                return icon.BreathingRate.BioAg_RadPar_Ih;
+            }
+            set
+            {
+                if (value == icon.BreathingRate.BioAg_RadPar_Ih)
+                    return;
+
+                icon.BreathingRate.BioAg_RadPar_Ih = value;
+                base.OnPropertyChanged("BreathingRateBioAg");
             }
         }
 
         void CreateBreathingRateValues()
         {
-            BreathingRateDictionary = new ObservableDictionary<string, float>
-            {
-                {   "At Rest",  (float)0.0075 },
-                {   "Light",    (float)0.0150 },
-                {   "Moderate", (float)0.0300 },
-                {   "Heavy",    (float)0.0750 }
-            };
+            icon.BreathingRate = new BreathingRate();
 
-            BreathingRateSelected = BreathingRateDictionary.ElementAt(1);
+            var list = BreathingRate.GetActivityLevelList();
+            BreathingRateList = new ObservableCollection<string>();
+            foreach(var elem in list)
+            {
+                BreathingRateList.Add(elem);
+            }
+
+            BreathingRateSelected = icon.BreathingRate.BreathingRateActivityLevel;
         }
 
         #region Breathing Rate Command
@@ -186,9 +203,9 @@ namespace CBRN_Project.MVVM.ViewModels
 
         #region IPE 
 
-        private ObservableCollection<ProtFactors> ipeList;
+        private ObservableCollection<string> ipeList;
 
-        public ObservableCollection<ProtFactors> IpeList
+        public ObservableCollection<string> IpeList
         {
             get { return ipeList; }
             set
@@ -199,15 +216,15 @@ namespace CBRN_Project.MVVM.ViewModels
             }
         }
 
-        private ProtFactors ipeSelected;
+        private string ipeSelected;
 
-        public ProtFactors IpeSelected
+        public string IpeSelected
         {
             get { return ipeSelected; }
             set
             {
                 ipeSelected = value;
-                icon.Ipe = ipeSelected;
+                icon.IPE.IpeClass = ipeSelected;
 
                 OnPropertyChanged("IpeSelected");
             }
@@ -215,7 +232,16 @@ namespace CBRN_Project.MVVM.ViewModels
 
         void CreateIpeClasses()
         {
-            
+            icon.IPE = new ProtFactors();
+
+            IpeList = new ObservableCollection<string>();
+            var list = ProtFactors.GetProtectionFactorsList();
+            foreach(var elem in list)
+            {
+                IpeList.Add(elem);
+            }
+
+            IpeSelected = icon.IPE.IpeClass;
         }
 
         public ICommand EditIpeCommand

@@ -146,21 +146,31 @@
                             UpdateSourceTrigger=PropertyChanged,
                             Converter={StaticResource StringToFloat}}"
                         Grid.Row="0" Grid.Column="1"/>
-            <ComboBox ItemsSource="{Binding BreathingRateDictionary}"
-                        DisplayMemberPath="Key"
-                        SelectedValuePath="Value"
+            <ComboBox  ItemsSource="{Binding BreathingRateList}"
                         SelectedItem="{Binding BreathingRateSelected}"
                         Visibility="{Binding BreathingRateComboBoxVisibility,
                                      UpdateSourceTrigger=PropertyChanged,
                                      Converter={StaticResource BooleanToVisibility}}"
                         Grid.Row="1"  Grid.Column="1"/>
-            <TextBox Text="{Binding BreathingRateValue,
+            <TextBox Text="{Binding BreathingRateChemAg,
                             Mode=TwoWay,
                             UpdateSourceTrigger=PropertyChanged,
                             Converter={StaticResource StringToFloat}}"
                      Visibility="{Binding BreathingRateTextBoxVisibility,
                                   UpdateSourceTrigger=PropertyChanged,
                                   Converter={StaticResource BooleanToVisibility}}"
+                     Width="40" 
+                     HorizontalAlignment="Left"
+                     Grid.Row="1" Grid.Column="1"/>
+            <TextBox Text="{Binding BreathingRateBioAg,
+                            Mode=TwoWay,
+                            UpdateSourceTrigger=PropertyChanged,
+                            Converter={StaticResource StringToFloat}}"
+                     Visibility="{Binding BreathingRateTextBoxVisibility,
+                                  UpdateSourceTrigger=PropertyChanged,
+                                  Converter={StaticResource BooleanToVisibility}}"
+                     Width="40"
+                     HorizontalAlignment="Right"
                      Grid.Row="1" Grid.Column="1"/>
             <TextBox Text="{Binding BodySurfaceArea,
                             Mode=TwoWay,
@@ -169,8 +179,6 @@
                             Converter={StaticResource StringToFloat}}"
                         Grid.Row="2"  Grid.Column="1"/>
             <ComboBox ItemsSource="{Binding IpeList}"
-                      SelectedValue="Value"
-                      DisplayMemberPath="Value"
                       SelectedItem="{Binding IpeSelected}"
                       Grid.Row="3"  Grid.Column="1"/>
             <Button Content="Edit" Grid.Row="4"  Grid.Column="1"/>
